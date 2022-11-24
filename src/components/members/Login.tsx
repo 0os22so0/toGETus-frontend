@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <>
-      <h1>1. Login</h1>
+      <h1 className="bg-slate-50">1. Login</h1>
       <ul>
         <li>
           <Link to="/rest-room">Log In</Link>

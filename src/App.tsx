@@ -13,8 +13,6 @@ import Alarm from "./components/rounge/Alarm";
 import Setting from "./components/rounge/PartySetting";
 import PartyHistory from "./components/rounge/PartyHistory";
 
-import "./styles/app.css";
-
 const App = () => {
   return (
     <div className="App">
