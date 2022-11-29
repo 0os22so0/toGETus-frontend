@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Login from "./components/members/Login";
+import GoogleCallback from "./components/members/GoogleCalback";
+
 import RestRoom from "./components/rest-room/RestRoom";
 import SignUp from "./components/members/SignUp";
 import NewParty from "./components/rest-room/CreateNewParty";
@@ -15,11 +17,12 @@ import PartyHistory from "./components/rounge/PartyHistory";
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="App" style={{ margin: "100px" }}>
       <BrowserRouter>
         <Routes>
           {/* Members */}
           <Route path="/" element={<Login />} />
+          <Route path="/login/google/callback" element={<GoogleCallback />} />
           <Route path="/sign-up" element={<SignUp />} />
           {/* RestRoom */}
           <Route path="/rest-room" element={<RestRoom />} />
