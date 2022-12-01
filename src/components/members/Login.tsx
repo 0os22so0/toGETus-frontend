@@ -25,9 +25,13 @@ const Login = () => {
   return (
     <>
       <h1 className="text-3xl font-bold underline">1. Login</h1>
-      <form autoComplete="off">
-        <input type="text" placeholder="ID" style={{ margin: "10px" }} />
-        <input type="password" placeholder="PW" style={{ margin: "10px" }} />
+      <form>
+        <input type="username" placeholder="ID" style={{ margin: "10px" }} />
+        <input
+          type="current-password"
+          placeholder="PW"
+          style={{ margin: "10px" }}
+        />
         <br />
         <ul>
           <button
