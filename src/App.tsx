@@ -18,7 +18,7 @@ import PartyHistory from "./components/rounge/PartyHistory";
 const App = () => {
   return (
     <div
-      className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 "
+      className="container bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 "
       style={{ width: "100vh", height: "100vh" }}
     >
       <div className="container">
