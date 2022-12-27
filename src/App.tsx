@@ -17,6 +17,10 @@ import Alarm from "./components/rounge/Alarm";
 import Setting from "./components/rounge/PartySetting";
 import PartyHistory from "./components/rounge/PartyHistory";
 
+/**
+ * 우선 스마트폰 기준으로 작업! 반응형은 나중에
+ */
+
 const App = () => {
   return (
     <div className="bg-black !box-border">
@@ -26,10 +30,10 @@ const App = () => {
           // "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border border-black"
         )}
       >
-        <div className="border bg-white">
+        <div className="bg-white flex-none">
           <NaviBar />
         </div>
-        <div className="bg-orange-300 h-[100vh] min-w-[640px]">
+        <div className="bg-white h-[100vh] min-w-[640px] flex-grow">
           {/* <div className="bg-orange-300 md:h-[calc(100vh-102px)] lg:[100vh]"> */}
           <BrowserRouter>
             <Routes>
