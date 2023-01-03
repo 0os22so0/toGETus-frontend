@@ -1,21 +1,21 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { clsx } from "clsx";
 
-import Login from "./components/members/Login";
-import GoogleCallback from "./components/members/GoogleCalback";
-import NaviBar from "./components/NaviBar";
+import Login from "components/members/Login";
+import GoogleCallback from "components/members/GoogleCalback";
+import NaviBar from "components/NaviBar";
 
-import RestRoom from "./components/rest-room/RestRoom";
-import SignUp from "./components/members/SignUp";
-import NewParty from "./components/rest-room/CreateNewParty";
-import Profile from "./components/rest-room/profile/Profile";
-import History from "./components/rest-room/profile/Hisroty";
-import BadgeRoom from "./components/rest-room/profile/BidgeRoom";
-import PartyRounge from "./components/rounge/PartyRounge";
-import NewPost from "./components/rounge/NewPost";
-import Alarm from "./components/rounge/Alarm";
-import Setting from "./components/rounge/PartySetting";
-import PartyHistory from "./components/rounge/PartyHistory";
+import RestRoom from "components/rest-room/RestRoom";
+import SignUp from "components/members/SignUp";
+import NewParty from "components/rest-room/CreateNewParty";
+import Profile from "components/rest-room/profile/Profile";
+import History from "components/rest-room/profile/Hisroty";
+import BadgeRoom from "components/rest-room/profile/BidgeRoom";
+import PartyRounge from "components/rounge/PartyRounge";
+import NewPost from "components/rounge/NewPost";
+import Alarm from "components/rounge/Alarm";
+import Setting from "components/rounge/PartySetting";
+import PartyHistory from "components/rounge/PartyHistory";
 
 /**
  * 우선 스마트폰 기준으로 작업! 반응형은 나중에

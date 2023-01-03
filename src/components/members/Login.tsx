@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import BasicButton from "../BasicButton";
-import BasicInput from "../BasicTextInput";
-
-import GoogleButton from "./GoogleButton";
+import BasicButton from "components/BasicButton";
+import BasicInput from "components/BasicTextInput";
+import GoogleButton from "components/members/GoogleButton";
 
 const Login = () => {
   const [email, setEmail] = useState("");

@@ -1,6 +1,6 @@
 // import { FaUserCircle } from "react-icons/fa";
 import { clsx } from "clsx";
-import ProfileImage from "../images/profile.jpg";
+import ProfileImage from "images/profile.jpg";
 
 const NaviBar = () => {
   const checkShowNavi = () => {

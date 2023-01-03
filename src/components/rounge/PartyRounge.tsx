@@ -1,4 +1,4 @@
-import Feed from "./feed/Feed";
+import Feed from "components/rounge/feed/Feed";
 import { Link } from "react-router-dom";
 
 const PartyRounge = () => {

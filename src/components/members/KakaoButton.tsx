@@ -1,4 +1,4 @@
-import KakaoLoginButton from "../../images/kakao_login_medium_narrow.png";
+import KakaoLoginButton from "components/images/kakao_login_medium_narrow.png";
 
 const redirect_uri = "http://localhost:3000/sign-up";
 

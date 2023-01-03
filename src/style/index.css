@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("./nanumSquareNeo.css");
+
+html,
+body {
+  font-family: "Neo Regular" !important;
+}
+
+h1 {
+  font-size: 32px;
+  font-family: "Neo Extrabold" !important;
+}
