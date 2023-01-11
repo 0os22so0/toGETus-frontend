@@ -49,6 +49,7 @@ const GoogleButton = ({
 
   return (
     <GoogleLogin
+      className="w-[90vw] h-[42px] !shadow"
       clientId={process.env.REACT_APP_GOOGLE_KEY ?? ""}
       buttonText={"구글로 로그인"}
       onSuccess={onSuccess}

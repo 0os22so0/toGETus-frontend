@@ -1,9 +1,13 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "paper-texture": "url('images/paper-texture.png')",
+      },
+    },
     screens: {
-      sm: "640px", // 스맛폰
+      sm: "375px", // 스맛폰
       // => @media (min-width: 640px) { ... }
 
       md: "768px",

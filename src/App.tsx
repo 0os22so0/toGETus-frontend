@@ -24,16 +24,11 @@ import PartyHistory from "components/rounge/PartyHistory";
 const App = () => {
   return (
     <div className="bg-black !box-border">
-      <main
-        className={clsx(
-          "container flex flex-col justify-center md:flex-row"
-          // "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border border-black"
-        )}
-      >
-        <div className="bg-white flex-none">
+      <main className="container flex flex-col justify-center sm:flex-row h-[100vh]">
+        <div className="flex-none h-[100vh]">
           <NaviBar />
         </div>
-        <div className="bg-white h-[100vh] min-w-[640px] flex-grow">
+        <div className="min-w-[375px] flex-grow bg-paper-texture p-[6vw]">
           {/* <div className="bg-orange-300 md:h-[calc(100vh-102px)] lg:[100vh]"> */}
           <BrowserRouter>
             <Routes>
