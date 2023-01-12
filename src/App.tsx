@@ -30,7 +30,7 @@ const App = () => {
         </div>
         <div className="min-w-[375px] flex-grow bg-paper-texture p-[6vw]">
           {/* <div className="bg-orange-300 md:h-[calc(100vh-102px)] lg:[100vh]"> */}
-          <BrowserRouter>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
               {/* Members */}
               <Route path="/" element={<Login />} />
