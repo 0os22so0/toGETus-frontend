@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/0os22so0/toGETus-frontend/static/css/main.320ab5a6.css",
-    "main.js": "/0os22so0/toGETus-frontend/static/js/main.509a5785.js",
+    "main.js": "/0os22so0/toGETus-frontend/static/js/main.c7310366.js",
     "static/js/787.b81c2277.chunk.js": "/0os22so0/toGETus-frontend/static/js/787.b81c2277.chunk.js",
     "static/media/NanumSquareNeoTTF-dEb.woff": "/0os22so0/toGETus-frontend/static/media/NanumSquareNeoTTF-dEb.c393afd7217c692a3cdd.woff",
     "static/media/NanumSquareNeoTTF-bRg.woff": "/0os22so0/toGETus-frontend/static/media/NanumSquareNeoTTF-bRg.3ef1b154df4dd187269a.woff",
@@ -12,11 +12,11 @@
     "static/media/paper-texture.png": "/0os22so0/toGETus-frontend/static/media/paper-texture.27b7b4e39d13d57aedb0.png",
     "index.html": "/0os22so0/toGETus-frontend/index.html",
     "main.320ab5a6.css.map": "/0os22so0/toGETus-frontend/static/css/main.320ab5a6.css.map",
-    "main.509a5785.js.map": "/0os22so0/toGETus-frontend/static/js/main.509a5785.js.map",
+    "main.c7310366.js.map": "/0os22so0/toGETus-frontend/static/js/main.c7310366.js.map",
     "787.b81c2277.chunk.js.map": "/0os22so0/toGETus-frontend/static/js/787.b81c2277.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.320ab5a6.css",
-    "static/js/main.509a5785.js"
+    "static/js/main.c7310366.js"
   ]
 }
