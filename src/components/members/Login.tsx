@@ -53,22 +53,26 @@ const Login = () => {
     <main className="flex flex-col justify-between items-center pt-[10vh]">
       <h1 className="text-yellow-500">🤝 toGETus 🤝</h1>
 
-      <form className="m-0 flex flex-col w-[100%] gap-4 py-[10vh]">
-        <label>소셜 ID로 로그인</label>
-        <GoogleButton onSocial={onSocial} />
-        <label>이메일 ID로 로그인</label>
-        <BasicInput
-          type="username"
-          placeholder="ID"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <BasicInput
-          type="password"
-          placeholder="PW"
-          autoComplete="off"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <BasicButton onClick={() => onLogin()}>로그인</BasicButton>
+      <form className="m-0 flex flex-col w-[100%] gap-8 py-[10vh]">
+        <div className="flex flex-col gap-2">
+          <label>• 소셜 ID로 로그인</label>
+          <GoogleButton onSocial={onSocial} />
+        </div>
+        <div className="flex flex-col gap-2">
+          <label>• 이메일 ID로 로그인</label>
+          <BasicInput
+            type="username"
+            placeholder="ID"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <BasicInput
+            type="password"
+            placeholder="PW"
+            autoComplete="off"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <BasicButton onClick={() => onLogin()}>로그인</BasicButton>
+        </div>
       </form>
 
       <Link to="/sign-up" className="underline text-stone-400">
