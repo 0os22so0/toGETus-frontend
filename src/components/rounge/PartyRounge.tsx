@@ -1,5 +1,5 @@
-import Feed from "components/rounge/feed/Feed";
-import { Link } from "react-router-dom";
+import Feed from 'components/rounge/feed/Feed';
+import { Link } from 'react-router-dom';
 
 const PartyRounge = () => {
   return (

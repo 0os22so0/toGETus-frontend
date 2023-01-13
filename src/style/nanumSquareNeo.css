@@ -1,34 +1,34 @@
 /* Light */
 @font-face {
-  font-family: "Neo Light";
+  font-family: 'Neo Light';
   font-style: normal;
-  src: url("../fonts/NanumSquareNeoTTF-aLt.woff") format("woff");
+  src: url('../fonts/NanumSquareNeoTTF-aLt.woff') format('woff');
 }
 
 /* Regular */
 @font-face {
-  font-family: "Neo Regular";
+  font-family: 'Neo Regular';
   font-style: normal;
-  src: url("../fonts/NanumSquareNeoTTF-bRg.woff") format("woff");
+  src: url('../fonts/NanumSquareNeoTTF-bRg.woff') format('woff');
 }
 
 /* Bold */
 @font-face {
-  font-family: "Neo Bold";
+  font-family: 'Neo Bold';
   font-style: normal;
-  src: url("../fonts/NanumSquareNeoTTF-cBd.woff") format("woff");
+  src: url('../fonts/NanumSquareNeoTTF-cBd.woff') format('woff');
 }
 
 /* ExtraBold */
 @font-face {
-  font-family: "Neo ExtraBold";
+  font-family: 'Neo ExtraBold';
   font-style: normal;
-  src: url("../fonts/NanumSquareNeoTTF-dEb.woff") format("woff");
+  src: url('../fonts/NanumSquareNeoTTF-dEb.woff') format('woff');
 }
 
 /* Heavy */
 @font-face {
-  font-family: "Neo Heavy";
+  font-family: 'Neo Heavy';
   font-style: normal;
-  src: url("../fonts/NanumSquareNeoTTF-eHv.woff") format("woff");
+  src: url('../fonts/NanumSquareNeoTTF-eHv.woff') format('woff');
 }

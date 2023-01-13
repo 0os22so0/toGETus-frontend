@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import GoogleLogin from "react-google-login";
-import { gapi } from "gapi-script";
+import { useEffect } from 'react';
+import GoogleLogin from 'react-google-login';
+import { gapi } from 'gapi-script';
 
 const GoogleButton = ({
   onSocial,
@@ -21,14 +21,14 @@ const GoogleButton = ({
     const initClient = () => {
       gapi.client.init({
         clientId: process.env.REACT_APP_GOOGLE_KEY,
-        scope: "email",
+        scope: 'email',
       });
     };
-    gapi.load("client:auth2", initClient);
+    gapi.load('client:auth2', initClient);
   });
 
   const onSuccess = async (response: any) => {
-    console.log("success");
+    console.log('success');
 
     const {
       googleId,
@@ -37,7 +37,7 @@ const GoogleButton = ({
 
     await onSocial({
       socialId: googleId,
-      socialType: "google",
+      socialType: 'google',
       email,
       nickname: name,
     });
@@ -50,8 +50,8 @@ const GoogleButton = ({
   return (
     <GoogleLogin
       className="h-[42px] !shadow text-black"
-      clientId={process.env.REACT_APP_GOOGLE_KEY ?? ""}
-      buttonText={"구글로 로그인"}
+      clientId={process.env.REACT_APP_GOOGLE_KEY ?? ''}
+      buttonText={'구글로 로그인'}
       onSuccess={onSuccess}
       onFailure={onFailure}
     />

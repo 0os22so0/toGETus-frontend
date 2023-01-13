@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("./nanumSquareNeo.css");
+@import url('./nanumSquareNeo.css');
 
 html,
 body {
-  font-family: "Neo Regular" !important;
+  font-family: 'Neo Regular' !important;
 }
 
 h1 {
   font-size: 2rem;
-  font-family: "Neo Heavy" !important;
+  font-family: 'Neo Heavy' !important;
 }

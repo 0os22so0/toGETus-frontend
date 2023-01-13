@@ -1,23 +1,18 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import BasicButton from "components/BasicButton";
-import BasicInput from "components/BasicTextInput";
-import GoogleButton from "components/members/GoogleButton";
-import { useNavigate } from "react-router";
-import { BiRightArrowAlt } from "react-icons/bi";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import BasicButton from 'components/BasicButton';
+import BasicInput from 'components/BasicTextInput';
+import GoogleButton from 'components/members/GoogleButton';
+import { useNavigate } from 'react-router';
+import { BiRightArrowAlt } from 'react-icons/bi';
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const navigate = useNavigate();
 
-  const onSocial = async (props: {
-    socialId: string;
-    socialType: string;
-    email: string;
-    nickname: string;
-  }) => {
+  const onSocial = async (props: { socialId: string; socialType: string; email: string; nickname: string }) => {
     const { socialId, socialType, email, nickname } = props;
     console.log({
       socialId,
@@ -46,7 +41,7 @@ const Login = () => {
     //   .then((response) => response.json())
     //   .then((data) => alert(data));
 
-    navigate("/rest-room");
+    navigate('/rest-room');
   };
 
   return (
@@ -60,17 +55,8 @@ const Login = () => {
         </div>
         <div className="flex flex-col gap-2">
           <label>• 이메일 ID로 로그인</label>
-          <BasicInput
-            type="username"
-            placeholder="ID"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <BasicInput
-            type="password"
-            placeholder="PW"
-            autoComplete="off"
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <BasicInput type="username" placeholder="ID" onChange={(e) => setEmail(e.target.value)} />
+          <BasicInput type="password" placeholder="PW" autoComplete="off" onChange={(e) => setPassword(e.target.value)} />
           <BasicButton onClick={() => onLogin()}>#가보자고!!</BasicButton>
         </div>
       </form>
