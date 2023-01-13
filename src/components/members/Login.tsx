@@ -51,7 +51,7 @@ const Login = () => {
 
   return (
     <main className="flex flex-col justify-between items-center pt-[10vh]">
-      <h1 className="text-yellow-500">🤝 toGETus 🤝</h1>
+      <h1 className="text-togetus-emoji">🤝 toGETus 🤝</h1>
 
       <form className="m-0 flex flex-col w-[100%] gap-8 py-[10vh]">
         <div className="flex flex-col gap-2">
@@ -71,7 +71,7 @@ const Login = () => {
             autoComplete="off"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <BasicButton onClick={() => onLogin()}>로그인</BasicButton>
+          <BasicButton onClick={() => onLogin()}>#가보자고!!</BasicButton>
         </div>
       </form>
 

@@ -5,7 +5,9 @@ module.exports = {
       backgroundImage: {
         "paper-texture": "url('images/paper-texture.png')",
       },
-      // colors: {},
+      colors: {
+        "togetus-emoji": "#FCCC45",
+      },
     },
     screens: {
       sm: "375px", // 스맛폰
