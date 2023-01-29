@@ -4,7 +4,6 @@ import BasicButton from 'components/BasicButton';
 import BasicInput from 'components/BasicTextInput';
 import GoogleButton from 'components/members/GoogleButton';
 import { useNavigate } from 'react-router';
-import { BiRightArrowAlt } from 'react-icons/bi';
 
 /**
  *
@@ -63,7 +62,9 @@ const Login = () => {
           <label>• 이메일 ID로 로그인</label>
           <BasicInput type="email" placeholder="이메일 ID" onChange={(e) => setEmail(e.target.value)} />
           <BasicInput type="password" placeholder="비밀번호" autoComplete="off" onChange={(e) => setPassword(e.target.value)} />
-          <BasicButton onClick={() => onLogin()}>#가보자고!!</BasicButton>
+          <BasicButton className="bg-togetus-emoji" onClick={() => onLogin()}>
+            #가보자고!!
+          </BasicButton>
         </div>
       </form>
       {/* Sign Up */}
