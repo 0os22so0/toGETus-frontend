@@ -3,6 +3,7 @@ import BasicButton from 'components/BasicButton';
 import BasicTextInput from 'components/BasicTextInput';
 import { useState } from 'react';
 import { BsArrowUpCircle, BsArrowDownCircle } from 'react-icons/bs';
+import JoinTitle from 'images/join.png';
 
 /**
  * 회원가입 페이지(/sign-up)
@@ -13,9 +14,8 @@ const SignUp = () => {
   return (
     <main className="flex flex-col justify-between items-center pt-[10vh]">
       {/* Title */}
-      <h1>
-        <span className="text-togetus-emoji">거기 너 내 동료가 돼라</span>
-      </h1>
+      <img src={JoinTitle} alt={'거기 너 내 동료가 돼라'} />
+
       {/* <div className="h-8 w-8 bg-blue-600 transition-opacity ease-in duration-700 opacity-100 hover:opacity-0">test</div> */}
       {/* STEP 1 */}
       <div className={clsx('w-[100%]', step !== 1 && 'hidden ease-in transition-')}>

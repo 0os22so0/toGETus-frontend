@@ -4,6 +4,7 @@ import BasicButton from 'components/BasicButton';
 import BasicInput from 'components/BasicTextInput';
 import GoogleButton from 'components/members/GoogleButton';
 import { useNavigate } from 'react-router';
+import toGETusLogo from 'images/logo.png';
 
 /**
  *
@@ -51,7 +52,8 @@ const Login = () => {
   return (
     <main className="flex flex-col justify-between items-center pt-[10vh]">
       {/* Title */}
-      <h1 className="text-togetus-emoji">🤝 toGETus 🤝</h1>
+      <img src={toGETusLogo} alt={'togetus logo'} />
+
       {/* Login Form */}
       <form className="m-0 flex flex-col w-[100%] gap-8 py-[10vh]">
         <div className="flex flex-col gap-2">
