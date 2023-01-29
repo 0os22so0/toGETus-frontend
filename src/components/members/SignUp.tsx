@@ -26,8 +26,12 @@ const SignUp = () => {
             required={true}
           />
           <InputWithLabel labelText="• 이메일 ID" input={<BasicTextInput placeholder="이메일 ID" type="email" />} required={true} />
-          <InputWithLabel labelText="• 비밀번호" input={<BasicTextInput placeholder="비밀번호" type="password" />} required={true} />
-          <InputWithLabel labelText="• 비밀번호 확인" input={<BasicTextInput placeholder="비밀번호" type="password" />} required={true} />
+          <InputWithLabel labelText="• 비밀번호" input={<BasicTextInput placeholder="비밀번호" type="new-password" />} required={true} />
+          <InputWithLabel
+            labelText="• 비밀번호 확인"
+            input={<BasicTextInput placeholder="비밀번호" type="new-password" />}
+            required={true}
+          />
         </form>
         <div className="flex justify-center">
           <BsArrowDownCircle size={32} className="text-stone-400 cursor-pointer animate-bounce" onClick={() => setStep(2)} />
