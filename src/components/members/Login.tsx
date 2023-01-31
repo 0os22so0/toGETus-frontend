@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router';
 import toGETusLogo from 'images/logo.png';
 
 /**
- *
  * 로그인 페이지(/)
  * @returns
  */
