@@ -27,6 +27,7 @@ const Login = () => {
   };
 
   const onLogin = async () => {
+    
     console.log({
       userId: email,
       password: password,
@@ -54,7 +55,7 @@ const Login = () => {
       <img src={toGETusLogo} alt={'togetus logo'} />
 
       {/* Login Form */}
-      <form className="m-0 flex flex-col w-[100%] gap-8 py-[10vh]">
+      <form className="m-0 flex flex-col w-full gap-8 py-[10vh]">
         <div className="flex flex-col gap-2">
           <label>• 소셜 ID로 로그인</label>
           <GoogleButton onSocial={onSocial} />

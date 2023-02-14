@@ -18,8 +18,8 @@ const SignUp = () => {
 
       {/* <div className="h-8 w-8 bg-blue-600 transition-opacity ease-in duration-700 opacity-100 hover:opacity-0">test</div> */}
       {/* STEP 1 */}
-      <div className={clsx('w-[100%]', step !== 1 && 'hidden ease-in transition-')}>
-        <form className="m-0 flex flex-col w-[100%] gap-4 py-[10vh]">
+      <div className={clsx('w-full', step !== 1 && 'hidden ease-in transition-')}>
+        <form className="m-0 flex flex-col w-full gap-4 py-[10vh]">
           <InputWithLabel
             labelText="• common하게 사용할 이름"
             input={<BasicTextInput placeholder="햄스탁스 서" type="name" />}
@@ -38,7 +38,7 @@ const SignUp = () => {
         </div>
       </div>
       {/* STEP 2 */}
-      <div className={clsx('m-0 flex flex-col w-[100%] gap-4 py-[10vh]', step !== 2 && 'hidden')}>
+      <div className={clsx('m-0 flex flex-col w-full gap-4 py-[10vh]', step !== 2 && 'hidden')}>
         <div className="flex justify-center">
           <BsArrowUpCircle size={32} className="text-stone-400 cursor-pointer" onClick={() => setStep(1)} />
         </div>
