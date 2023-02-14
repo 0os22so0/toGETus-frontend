@@ -27,26 +27,21 @@ const Login = () => {
   };
 
   const onLogin = async () => {
-    
-    console.log({
-      userId: email,
-      password: password,
-    });
-
-    // await fetch("http://3.35.176.118:8080/api/login", {
-    //   method: "POST",
+    // await fetch('http://13.125.75.1:8080/api/login', {
+    //   method: 'POST',
     //   headers: {
-    //     "Content-Type": "application/json",
+    //     'Content-Type': 'application/json',
     //   },
     //   body: JSON.stringify({
-    //     userId: "test@test.com",
-    //     password: "1234",
+    //     userId: email,
+    //     password: password,
     //   }),
     // })
-    //   .then((response) => response.json())
-    //   .then((data) => alert(data));
-
+    //   .then((response) => {
+    //     response.json();
     navigate('/rest-room');
+    // })
+    // .catch((error) => console.log(error));
   };
 
   return (
