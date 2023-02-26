@@ -1,6 +1,8 @@
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { RiUserFill, RiMedalFill, RiLogoutBoxRFill } from 'react-icons/ri';
+import { GiFeather } from 'react-icons/gi';
 import clsx from 'clsx';
 
 import ProfileImage from 'images/profile.jpg';
@@ -49,24 +51,39 @@ const NaviBar = () => {
               <Menu.Item>
                 {({ active }) => (
                   <button
-                    className={`${active && 'bg-yellow-200'} flex w-full rounded-md px-2 py-2 text-sm`}
+                    className={`${active && 'bg-yellow-200'} flex items-center w-full rounded-md px-2 py-2 text-sm`}
                     onClick={() => {
                       navigate('/rest-room/profile');
                     }}
                   >
-                    💡 내 정보
+                    <RiUserFill className="mr-2" color="#FBBC05" />
+                    <span>신상정보명세서</span>
                   </button>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
                   <button
-                    className={`${active && 'bg-yellow-200'} flex w-full rounded-md px-2 py-2 text-sm`}
+                    className={`${active && 'bg-yellow-200'} flex items-center w-full rounded-md px-2 py-2 text-sm`}
                     onClick={() => {
                       navigate('/rest-room/profile/badge');
                     }}
                   >
-                    😎 내 와기뱃지들
+                    <GiFeather className="mr-2" color="#FBBC05" />
+                    <span>기록들</span>
+                  </button>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${active && 'bg-yellow-200'} flex items-center w-full rounded-md px-2 py-2 text-sm`}
+                    onClick={() => {
+                      navigate('/rest-room/profile/badge');
+                    }}
+                  >
+                    <RiMedalFill className="mr-2" color="#FBBC05" />
+                    <span>훈장들</span>
                   </button>
                 )}
               </Menu.Item>
@@ -74,8 +91,12 @@ const NaviBar = () => {
             <div className="px-1 py-1">
               <Menu.Item>
                 {({ active }) => (
-                  <button className={`${active && 'bg-yellow-200'} flex w-full rounded-md px-2 py-2 text-sm`} onClick={() => navigate('/')}>
-                    👋 로그아웃
+                  <button
+                    className={`${active && 'bg-yellow-200'} flex items-center w-full rounded-md px-2 py-2 text-sm`}
+                    onClick={() => navigate('/')}
+                  >
+                    <RiLogoutBoxRFill className="mr-2" color="#FBBC05" />
+                    <span>로그아웃</span>
                   </button>
                 )}
               </Menu.Item>

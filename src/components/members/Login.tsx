@@ -53,7 +53,7 @@ const Login = () => {
       <form className="m-0 flex flex-col w-full gap-8 py-[10vh]">
         <div className="flex flex-col gap-2">
           <label>• 소셜 ID로 로그인</label>
-          <GoogleButton onSocial={onSocial} />
+          {/* <GoogleButton onSocial={onSocial} /> */}
         </div>
         <div className="flex flex-col gap-2">
           <label>• 이메일 ID로 로그인</label>
