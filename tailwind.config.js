@@ -6,7 +6,10 @@ module.exports = {
         'paper-texture': "url('images/paper-texture.png')",
       },
       colors: {
-        'togetus-emoji': '#FCCC45',
+        'togetus-emoji': '#FBBC05',
+      },
+      borderColor: {
+        DEFAULT: '#D9D9D9',
       },
       keyframes: {
         wave: {
