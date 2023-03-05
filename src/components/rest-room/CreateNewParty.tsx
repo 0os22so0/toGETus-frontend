@@ -55,10 +55,15 @@ const CreateNewParty = () => {
                   dDays === 'custom' && 'bg-togetus-emoji text-white rounded-bl-none'
                 )}
               >
-                <input type="radio" name="d-day" value={0} onChange={() => setDDays('custom')} className="hidden" /> 직접 입력
+                <input type="radio" name="d-day" value={'custom'} onChange={() => setDDays('custom')} className="hidden" /> 직접 입력
               </label>
               {dDays === 'custom' && (
-                <BasicTextInput type="number" className="w-full rounded-t-0" onChange={(e) => setCustomDDay(Number(e.target.value))} />
+                <BasicTextInput
+                  type="number"
+                  className="w-full rounded-t-0"
+                  defaultValue={0}
+                  onChange={(e) => setCustomDDay(Number(e.target.value))}
+                />
               )}
             </div>
             <span className="mt-1 text-sm">예상 종료일: {endDate}</span>
