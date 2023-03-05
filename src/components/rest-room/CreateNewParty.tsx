@@ -11,14 +11,18 @@ const CreateNewParty = () => {
   const [endDate, setEndDate] = useState<string>('');
   const [rule, setRule] = useState<TRule>('PM');
 
+  // 예상 종료일 계산 로직
   useEffect(() => {
     const today = new Date();
+
     if (dDays === 'custom') {
+      today.setDate(today.getDate() + customDDay);
     } else {
+      today.setDate(today.getDate() + dDays);
     }
 
-    setEndDate(`${today.getFullYear()}`);
-  }, [rule, dDays]);
+    setEndDate(`${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`);
+  }, [dDays, customDDay]);
 
   return (
     <form className="w-full flex flex-col justify-between items-center">
