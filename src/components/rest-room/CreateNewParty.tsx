@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import BasicTextInput from 'components/BasicTextInput';
+import BasicTextArea from 'components/BasicTextArea';
+import BasicButton from 'components/BasicButton';
 
 type TDDays = 10 | 100 | 'custom';
 type TRule = 'PM' | 'OTHER';
@@ -10,6 +12,7 @@ const CreateNewParty = () => {
   const [customDDay, setCustomDDay] = useState<number>(0);
   const [endDate, setEndDate] = useState<string>('');
   const [rule, setRule] = useState<TRule>('PM');
+  const [customRule, setCustomRule] = useState<number>(0);
 
   // 예상 종료일 계산 로직
   useEffect(() => {
@@ -25,8 +28,10 @@ const CreateNewParty = () => {
   }, [dDays, customDDay]);
 
   return (
-    <form className="w-full flex flex-col justify-between items-center">
-      <InputWithLabel labelText="파티 이름" input={<BasicTextInput placeholder="toGETus" type="text" />} required={true} className="mb-6" />
+    <form className="w-full flex flex-col justify-between items-center gap-5">
+      {/* 파티 이름 */}
+      <InputWithLabel labelText="파티 이름" input={<BasicTextInput placeholder="toGETus" type="text" />} required={true} />
+      {/* 파티 챌린지 기간 */}
       <InputWithLabel
         labelText="파티 챌린지 기간"
         input={
@@ -71,22 +76,65 @@ const CreateNewParty = () => {
         }
         required={true}
       />
-      {/* <InputWithLabel
+      {/* 파티 챌린지 목표 */}
+      <InputWithLabel
+        labelText="파티 챌린지 목표"
+        input={
+          <>
+            <BasicTextInput placeholder="파티 챌린지 목표" />
+            <BasicTextArea placeholder="필요 시 설명을 적어주세요." />
+          </>
+        }
+        required={true}
+      />
+
+      {/* 파티 인증 룰 */}
+      <InputWithLabel
         labelText="인증 룰"
         input={
-          <div>
-            <label>
-              <input type="radio" name="auth-way" value="PM" onChange={() => setRule('PM')} defaultChecked /> 파티장만
+          <div className="w-full">
+            <label
+              className={clsx(
+                'inline-block w-1/3 h-[40px] rounded-l text-black text-center p-2 border border-r-0 border-[#D9D9D9]',
+                rule === 'PM' && 'bg-togetus-emoji text-white'
+              )}
+            >
+              <input type="radio" name="auth-way" value="PM" onChange={() => setRule('PM')} defaultChecked className="hidden" /> 파티장만
             </label>
-            <label>
-              <input type="radio" name="auth-way" value="OTHER" onChange={() => setRule('OTHER')} /> 구성원
-            </label>
-            {rule === 'OTHER' && <BasicTextInput type="number" />}
+            <label
+              className={clsx(
+                'inline-block w-1/3 h-[40px] rounded-r text-black text-center p-2 border',
+                rule === 'OTHER' && 'bg-togetus-emoji text-white'
+              )}
+            >
+              <input type="radio" name="auth-way" value="OTHER" onChange={() => setRule('OTHER')} className="hidden" /> 구성원 비율
+            </label>{' '}
+            {rule === 'OTHER' && (
+              <BasicTextInput
+                type="number"
+                className="w-full rounded-t-0"
+                defaultValue={0}
+                onChange={(e) => setCustomRule(Number(e.target.value))}
+              />
+            )}
           </div>
         }
         required={true}
-      /> */}
-      {/* 파티 인증 퀴즈 */}
+      />
+      {/* 파티 입장 퀴즈 */}
+      <InputWithLabel
+        labelText="파티 입장 퀴즈"
+        input={
+          <>
+            <BasicTextInput placeholder="질문을 입력해주세요." />
+            <BasicTextInput placeholder="답변을 입력해주세요." />
+          </>
+        }
+      />
+
+      <BasicButton className="bg-togetus-emoji text-white" onClick={() => console.log('create party')}>
+        한 판 벌여보세
+      </BasicButton>
     </form>
   );
 };
@@ -102,7 +150,7 @@ const InputWithLabel = (props: PInputWithLabel) => {
   const { labelText, input, required, className } = props;
   return (
     <div className={`flex flex-col w-full ${className}`}>
-      <label className="mb-3">
+      <label className="mb-1.5">
         {labelText}
         {required && <span className="text-togetus-emoji text-sm"> *</span>}
       </label>
