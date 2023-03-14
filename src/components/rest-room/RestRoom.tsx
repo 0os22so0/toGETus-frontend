@@ -1,36 +1,78 @@
 import { Link } from 'react-router-dom';
-import BasicButton from 'components/BasicButton';
+import { BsPlus } from 'react-icons/bs';
+
+type TParty = {
+  name: string;
+  member: {
+    name: string;
+    profileImageSource: string;
+  }[];
+};
+
+const dummyPartyData: TParty[] = [
+  { name: '#오운완', member: [{ name: 'user1', profileImageSource: 'test' }] },
+  {
+    name: '자네 척척석사로 삶을 마감할텐가',
+    member: [
+      { name: 'user1', profileImageSource: 'test' },
+      { name: 'user2', profileImageSource: 'test' },
+      { name: 'user3', profileImageSource: 'test' },
+    ],
+  },
+  {
+    name: '일어나... 점심 먹어야지',
+    member: [
+      { name: 'user1', profileImageSource: 'test' },
+      { name: 'user2', profileImageSource: 'test' },
+      { name: 'user3', profileImageSource: 'test' },
+      { name: 'user4', profileImageSource: 'test' },
+      { name: 'user5', profileImageSource: 'test' },
+      { name: 'user6', profileImageSource: 'test' },
+    ],
+  },
+];
 
 const RestRoom = () => {
   return (
-    <main className="flex flex-col justify-between items-center">
+    <main className="h-[100%] flex flex-col justify-between items-center ">
       {/* Party List */}
       <section className="w-full">
-        <Party />
+        <PartyList data={dummyPartyData} />
       </section>
 
-      {/* Create New Party Button */}
-      <BasicButton className="bg-togetus-emoji w-full mt-[1vh]">
-        <Link to="/party/new">새 파티 만들기</Link>
-      </BasicButton>
+      {/* Create New Party */}
+      <Link to="/party/new">
+        <div className="flex items-center">
+          <BsPlus />
+          <span>새로운 파티 만들어버리기</span>
+        </div>
+      </Link>
     </main>
   );
 };
 
 export default RestRoom;
 
-const Party = () => {
+type PPartyList = {
+  data: TParty[];
+};
+
+const PartyList = (props: PPartyList) => {
+  const { data } = props;
   return (
     <div>
-      {/* <img src="https://picsum.photos/200" className="rounded-full w-[25vw] outline outline-2 outline-offset-2" /> */}
-      {/* <div className="flex items-center justify-center"> */}
-      <div>
-        <div className="rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1">
-          <div className="flex items-center justify-center bg-gray-800 back">
-            <img src="https://picsum.photos/200" className="rounded-full w-[25vw]" />
-          </div>
-        </div>
-      </div>
+      {data.map((party) => (
+        <>
+          <p>{party.name}</p>
+          {party.member.map((m) => (
+            <>
+              <p>
+                {m.name}: {m.profileImageSource}
+              </p>
+            </>
+          ))}
+        </>
+      ))}
     </div>
   );
 };
