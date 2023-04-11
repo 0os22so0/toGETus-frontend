@@ -46,31 +46,30 @@ const Login = () => {
   };
 
   return (
-    <main className="flex flex-col justify-between items-center pt-[10vh]">
-      {/* Title */}
-      <img src={toGETusLogo} alt={'togetus logo'} />
+    <main className="pt-[10vh]">
+      <form className="flex flex-col justify-between items-center">
+        {/* Title */}
+        <img src={toGETusLogo} alt={'togetus logo'} className="w-[40vw]" />
 
-      {/* Login Form */}
-      <form className="m-0 flex flex-col w-full gap-8 py-[10vh]">
-        <div
-          className={clsx(
-            'flex flex-col gap-2',
-            'bg-gradient-to-tl from-indigo-500 via-purple-500 to-pink-50',
-            'background-image: linear-gradient(-20deg, #E9DEFA 0%, #FBFCDB 100%);'
-          )}
-        >
-          <BasicInput type="email" placeholder="아이디" onChange={(e) => setEmail(e.target.value)} />
-          <BasicInput type="password" placeholder="비밀번호" autoComplete="off" onChange={(e) => setPassword(e.target.value)} />
-          <GoogleButton onSocial={onSocial} />
+        {/* Inputs */}
+        <div className="m-0 flex flex-col w-[80%] py-[7vh]">
+          <div className={clsx('flex flex-col gap-2', 'background-image: linear-gradient(-20deg, #E9DEFA 0%, #FBFCDB 100%);')}>
+            <BasicInput type="email" placeholder="아이디" onChange={(e) => setEmail(e.target.value)} />
+            <BasicInput type="password" placeholder="비밀번호" autoComplete="off" onChange={(e) => setPassword(e.target.value)} />
+            <GoogleButton onSocial={onSocial} />
+          </div>
         </div>
-        <BasicButton className="bg-togetus-emoji" onClick={() => onLogin()}>
-          #가보자고!!
-        </BasicButton>
+
+        {/* Buttons */}
+        <div className="text-center">
+          <BasicButton className="w-[40vw] bg-black text-white mb-2" onClick={() => onLogin()}>
+            들어갑시다
+          </BasicButton>
+          <BasicButton className="w-[40vw] bg-white" onClick={() => navigate('sign-up')}>
+            회원가입
+          </BasicButton>
+        </div>
       </form>
-      {/* Sign Up */}
-      <Link to="/sign-up" className="underline text-stone-400">
-        가입하기
-      </Link>
     </main>
   );
 };
