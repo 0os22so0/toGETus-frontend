@@ -5,6 +5,7 @@ import BasicInput from 'components/BasicTextInput';
 import GoogleButton from 'components/members/GoogleButton';
 import { useNavigate } from 'react-router';
 import toGETusLogo from 'images/logo.png';
+import clsx from 'clsx';
 
 /**
  * 로그인 페이지(/)
@@ -51,18 +52,20 @@ const Login = () => {
 
       {/* Login Form */}
       <form className="m-0 flex flex-col w-full gap-8 py-[10vh]">
-        <div className="flex flex-col gap-2">
-          <label>• 소셜 ID로 로그인</label>
-          {/* <GoogleButton onSocial={onSocial} /> */}
-        </div>
-        <div className="flex flex-col gap-2">
-          <label>• 이메일 ID로 로그인</label>
-          <BasicInput type="email" placeholder="이메일 ID" onChange={(e) => setEmail(e.target.value)} />
+        <div
+          className={clsx(
+            'flex flex-col gap-2',
+            'bg-gradient-to-tl from-indigo-500 via-purple-500 to-pink-50',
+            'background-image: linear-gradient(-20deg, #E9DEFA 0%, #FBFCDB 100%);'
+          )}
+        >
+          <BasicInput type="email" placeholder="아이디" onChange={(e) => setEmail(e.target.value)} />
           <BasicInput type="password" placeholder="비밀번호" autoComplete="off" onChange={(e) => setPassword(e.target.value)} />
-          <BasicButton className="bg-togetus-emoji" onClick={() => onLogin()}>
-            #가보자고!!
-          </BasicButton>
+          <GoogleButton onSocial={onSocial} />
         </div>
+        <BasicButton className="bg-togetus-emoji" onClick={() => onLogin()}>
+          #가보자고!!
+        </BasicButton>
       </form>
       {/* Sign Up */}
       <Link to="/sign-up" className="underline text-stone-400">
