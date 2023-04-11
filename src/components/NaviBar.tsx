@@ -21,7 +21,7 @@ const NaviBar = () => {
   return checkShowNavi() ? (
     <div className="flex justify-between items-center p-3">
       {/* 왼쪽 - 뒤로가기 */}
-      <IoIosArrowBack className="cursor-pointer" />
+      <IoIosArrowBack className="cursor-pointer" onClick={() => navigate(-1)} />
 
       {/* 가운데 - 로고 */}
       <Menu as="div" className="relative inline-block text-left">
