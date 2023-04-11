@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { RiUserFill, RiMedalFill, RiLogoutBoxRFill } from 'react-icons/ri';
+import { IoIosArrowBack } from 'react-icons/io';
 import { GiFeather } from 'react-icons/gi';
 import clsx from 'clsx';
 
@@ -18,23 +19,15 @@ const NaviBar = () => {
   };
 
   return checkShowNavi() ? (
-    <div className="flex justify-between items-center p-3 bg-white border-b border-slate-200">
-      {/* 왼쪽 */}
-      <div className="">
-        <span className="text-xs">Something</span>
-      </div>
+    <div className="flex justify-between items-center p-3">
+      {/* 왼쪽 - 뒤로가기 */}
+      <IoIosArrowBack className="cursor-pointer" />
 
-      {/* Logo - toGETus */}
-      <img src={toGETusLogo} alt={'togetus logo'} className="h-[4vh]" />
-
-      {/* User Profile */}
-      {/* <button onClick={() => console.log('profile')}>
-        <img src={ProfileImage} alt="Profile Image" className="rounded-full w-[32px] h-[32px]" />
-      </button> */}
+      {/* 가운데 - 로고 */}
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button>
-            <img src={ProfileImage} alt="Profile Image" className={clsx('rounded-full w-[32px] h-[32px]')} />
+            <img src={toGETusLogo} alt={'togetus logo'} className="h-[4vh]" />
           </Menu.Button>
         </div>
         <Transition
