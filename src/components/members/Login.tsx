@@ -62,10 +62,10 @@ const Login = () => {
 
         {/* Buttons */}
         <div className="text-center">
-          <BasicButton className="w-[40vw] bg-black text-white mb-2" onClick={() => onLogin()}>
+          <BasicButton className="bg-black text-white mb-2" onClick={() => onLogin()}>
             들어갑시다
           </BasicButton>
-          <BasicButton className="w-[40vw] bg-white" onClick={() => navigate('sign-up')}>
+          <BasicButton className="bg-white" onClick={() => navigate('sign-up')}>
             회원가입
           </BasicButton>
         </div>
