@@ -1,4 +1,5 @@
 import { userProfileState } from 'atoms/userProfile';
+import clsx from 'clsx';
 import BasicButton from 'components/BasicButton';
 import BasicTextInput from 'components/BasicTextInput';
 import InputWithLabel from 'components/InputWithLabel';
@@ -36,27 +37,10 @@ const PartyRounge = () => {
       <BasicButton onClick={() => setIsFirstVisit(false)}>들어갈게요!</BasicButton>
     </form>
   ) : (
-    <>
-      <h1>5. Party Rounge</h1>
+    <main className="w-full">
+      <div className={clsx('w-full mb-6', 'h-[300px] bg-slate-200 text-center')}>TODO :: 달력</div>
       <Feed />
-      <ul>
-        <li>
-          <Link to="./">Feed</Link>
-        </li>
-        <li>
-          <Link to="./post">Write</Link>
-        </li>
-        <li>
-          <Link to="./alarm">alarm</Link>
-        </li>
-        <li>
-          <Link to="/rest-room/profile">My Setting</Link>
-        </li>
-        <li>
-          <Link to="./setting">Party Setting</Link>
-        </li>
-      </ul>
-    </>
+    </main>
   );
 };
 
