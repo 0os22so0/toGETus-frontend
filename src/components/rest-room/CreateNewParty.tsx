@@ -35,7 +35,7 @@ const CreateNewParty = () => {
     <>
       {/* 유저 프로필 */}
       <div className="flex justify-center items-center gap-4 mb-10">
-        <img src={userProfile.image} alt="user profile image" className="w-[4rem] h-[4rem] rounded-full" />
+        <img src={userProfile.image} alt="user profile image" className="w-[6rem] h-[6rem] rounded-full" />
         <div className="text-lg">
           <p>
             <span className="text-xl">{userProfile.name}</span>님,

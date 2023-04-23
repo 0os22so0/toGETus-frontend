@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { BsPlus } from 'react-icons/bs';
 import clsx from 'clsx';
-
-import testImage from 'images/profile.jpg';
+import { useRecoilValue } from 'recoil';
+import { userProfileState } from 'atoms/userProfile';
 
 type TParty = {
   name: string;
@@ -45,10 +45,25 @@ const dummyPartyData: TParty[] = [
 ];
 
 const RestRoom = () => {
+  const userProfile = useRecoilValue(userProfileState);
+
   return (
     <main className="h-[100%] flex flex-col justify-between items-center ">
-      {/* Party List */}
-      <PartyList data={dummyPartyData} />
+      {/* 레이아웃을 위해 유저 프로필 + Party List */}
+      <div>
+        {/* 유저 프로필 */}
+        <div className="flex justify-center items-center gap-4 mb-10">
+          <img src={userProfile.image} alt="user profile image" className="w-[6rem] h-[6rem] rounded-full" />
+          <div className="text-lg">
+            <p>
+              <span className="text-xl">{userProfile.name}</span>님,
+            </p>
+            <p>오늘도 갓생 #가보자고!</p>
+          </div>
+        </div>
+        {/* Party List */}
+        <PartyList data={dummyPartyData} />
+      </div>
 
       {/* Create New Party */}
       <Link to="/party/new">
@@ -80,7 +95,8 @@ const PartyList = (props: PPartyList) => {
           <a onClick={() => navigate('/party/party-name')}>
             <span className="leading-4">{party.name}</span>
             <div className="flex items-center">
-              {party.member.slice(0, 3).map((m, index) => (
+              {/* // TODO :: 쫌쫌따리 작아지는 이미지 */}
+              {/* {party.member.slice(0, 3).map((m, index) => (
                 <div key={index}>
                   <img
                     className={`rounded-full w-[${2 - 0.5 * index}em] h-[${2 - 0.5 * index}em]`}
@@ -90,7 +106,7 @@ const PartyList = (props: PPartyList) => {
                   />
                   <span>{2 - 0.5 * index}</span>
                 </div>
-              ))}
+              ))} */}
               {party.member.length > 3 && <span className="text-sm">+ {party.member.length - 3}</span>}
             </div>
           </a>
