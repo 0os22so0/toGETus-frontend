@@ -39,8 +39,8 @@ const CreateNewParty = () => {
             <div className="w-full">
               <label
                 className={clsx(
-                  'inline-block w-1/3 h-[40px] rounded-l text-black text-center p-2 border border-r-0 border-[#D9D9D9]',
-                  dDays === 10 && 'bg-togetus-emoji text-white',
+                  'inline-block w-1/3 h-[40px] rounded-l-full text-center p-2 border border-r-0 border-[#D9D9D9]',
+                  dDays === 10 ? 'bg-black text-white' : 'bg-white text-black',
                   dDays === 'custom' && 'rounded-br-none'
                 )}
               >
@@ -48,16 +48,16 @@ const CreateNewParty = () => {
               </label>
               <label
                 className={clsx(
-                  'inline-block w-1/3 h-[40px] text-black text-center p-2 border border-r-0',
-                  dDays === 100 && 'bg-togetus-emoji text-white'
+                  'inline-block w-1/3 h-[40px] text-center p-2 border border-r-0',
+                  dDays === 100 ? 'bg-black text-white' : 'bg-white text-black'
                 )}
               >
                 <input type="radio" name="d-day" value={100} onChange={() => setDDays(100)} className="hidden" /> 100일
               </label>
               <label
                 className={clsx(
-                  'inline-block w-1/3 h-[40px] rounded-r text-black text-center p-2 border',
-                  dDays === 'custom' && 'bg-togetus-emoji text-white rounded-bl-none'
+                  'inline-block w-1/3 h-[40px] rounded-r-full text-center p-2 border',
+                  dDays === 'custom' ? 'bg-black text-white rounded-bl-none' : 'bg-white text-black'
                 )}
               >
                 <input type="radio" name="d-day" value={'custom'} onChange={() => setDDays('custom')} className="hidden" /> 직접 입력
@@ -65,7 +65,7 @@ const CreateNewParty = () => {
               {dDays === 'custom' && (
                 <BasicTextInput
                   type="number"
-                  className="w-full rounded-t-0"
+                  className="w-full mt-2"
                   defaultValue={0}
                   onChange={(e) => setCustomDDay(Number(e.target.value))}
                 />
@@ -95,16 +95,16 @@ const CreateNewParty = () => {
           <div className="w-full">
             <label
               className={clsx(
-                'inline-block w-1/3 h-[40px] rounded-l text-black text-center p-2 border border-r-0 border-[#D9D9D9]',
-                rule === 'PM' && 'bg-togetus-emoji text-white'
+                'inline-block w-1/3 h-[40px] rounded-l-full text-center p-2 border border-r-0 border-[#D9D9D9]',
+                rule === 'PM' ? 'bg-black text-white' : 'bg-white text-black'
               )}
             >
               <input type="radio" name="auth-way" value="PM" onChange={() => setRule('PM')} defaultChecked className="hidden" /> 파티장만
             </label>
             <label
               className={clsx(
-                'inline-block w-1/3 h-[40px] rounded-r text-black text-center p-2 border',
-                rule === 'OTHER' && 'bg-togetus-emoji text-white'
+                'inline-block w-1/3 h-[40px] rounded-r-full text-center p-2 border',
+                rule === 'OTHER' ? 'bg-black text-white' : 'bg-white text-black'
               )}
             >
               <input type="radio" name="auth-way" value="OTHER" onChange={() => setRule('OTHER')} className="hidden" /> 구성원 비율
@@ -132,7 +132,7 @@ const CreateNewParty = () => {
         }
       />
 
-      <BasicButton className="bg-togetus-emoji text-white" onClick={() => console.log('create party')}>
+      <BasicButton className="bg-black text-white" onClick={() => console.log('create party')}>
         한 판 벌여보세
       </BasicButton>
     </form>
