@@ -3,11 +3,17 @@ import clsx from 'clsx';
 import BasicTextInput from 'components/BasicTextInput';
 import BasicTextArea from 'components/BasicTextArea';
 import BasicButton from 'components/BasicButton';
+import { useRecoilValue } from 'recoil';
+import { userProfileState } from 'atoms/userProfile';
 
 type TDDays = 10 | 100 | 'custom';
 type TRule = 'PM' | 'OTHER';
 
 const CreateNewParty = () => {
+  const userProfile = useRecoilValue(userProfileState);
+
+  console.log(userProfile);
+
   const [dDays, setDDays] = useState<TDDays>(10);
   const [customDDay, setCustomDDay] = useState<number>(0);
   const [endDate, setEndDate] = useState<string>('');

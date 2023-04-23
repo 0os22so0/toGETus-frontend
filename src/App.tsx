@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 
 import Login from 'components/members/Login';
 import GoogleCallback from 'components/members/GoogleCalback';
@@ -22,34 +23,36 @@ import PartyHistory from 'components/rounge/PartyHistory';
 
 const App = () => {
   return (
-    <div className="bg-black !box-border">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <main className="container flex flex-row justify-center sm:flex-col h-[100vh] bg-gradient-to-tl from-[#E9DEFA] to-[#FBFCDB]">
-          <NaviBar />
-          <div className="min-w-[375px] flex-grow p-[4vw]">
-            {/* <div className="bg-orange-300 md:h-[calc(100vh-102px)] lg:[100vh]"> */}
-            <Routes>
-              {/* Members */}
-              <Route path="/" element={<Login />} />
-              <Route path="/login/google/callback" element={<GoogleCallback />} />
-              <Route path="/sign-up" element={<SignUp />} />
-              {/* RestRoom */}
-              <Route path="/rest-room" element={<RestRoom />} />
-              <Route path="/rest-room/profile" element={<Profile />} />
-              <Route path="/rest-room/profile/history" element={<History />} />
-              <Route path="/rest-room/profile/badge" element={<BadgeRoom />} />
-              <Route path="/party/new" element={<NewParty />} />
-              {/* Party */}
-              <Route path="/party/party-name" element={<PartyRounge />} />
-              <Route path="/party/party-name/post" element={<NewPost />} />
-              <Route path="/party/party-name/alarm" element={<Alarm />} />
-              <Route path="/party/party-name/setting" element={<Setting />} />
-              <Route path="/party/party-name/setting/history" element={<PartyHistory />} />
-            </Routes>
-          </div>
-        </main>
-      </BrowserRouter>
-    </div>
+    <RecoilRoot>
+      <div className="bg-black !box-border">
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <main className="container flex flex-row justify-center sm:flex-col h-[100vh] bg-gradient-to-tl from-[#E9DEFA] to-[#FBFCDB]">
+            <NaviBar />
+            <div className="min-w-[375px] flex-grow p-[4vw]">
+              {/* <div className="bg-orange-300 md:h-[calc(100vh-102px)] lg:[100vh]"> */}
+              <Routes>
+                {/* Members */}
+                <Route path="/" element={<Login />} />
+                <Route path="/login/google/callback" element={<GoogleCallback />} />
+                <Route path="/sign-up" element={<SignUp />} />
+                {/* RestRoom */}
+                <Route path="/rest-room" element={<RestRoom />} />
+                <Route path="/rest-room/profile" element={<Profile />} />
+                <Route path="/rest-room/profile/history" element={<History />} />
+                <Route path="/rest-room/profile/badge" element={<BadgeRoom />} />
+                <Route path="/party/new" element={<NewParty />} />
+                {/* Party */}
+                <Route path="/party/party-name" element={<PartyRounge />} />
+                <Route path="/party/party-name/post" element={<NewPost />} />
+                <Route path="/party/party-name/alarm" element={<Alarm />} />
+                <Route path="/party/party-name/setting" element={<Setting />} />
+                <Route path="/party/party-name/setting/history" element={<PartyHistory />} />
+              </Routes>
+            </div>
+          </main>
+        </BrowserRouter>
+      </div>
+    </RecoilRoot>
   );
 };
 
