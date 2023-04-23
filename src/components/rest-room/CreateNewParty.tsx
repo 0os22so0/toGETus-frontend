@@ -5,6 +5,7 @@ import BasicTextArea from 'components/BasicTextArea';
 import BasicButton from 'components/BasicButton';
 import { useRecoilValue } from 'recoil';
 import { userProfileState } from 'atoms/userProfile';
+import InputWithLabel from 'components/InputWithLabel';
 
 type TDDays = 10 | 100 | 'custom';
 type TRule = 'PM' | 'OTHER';
@@ -146,31 +147,9 @@ const CreateNewParty = () => {
             </>
           }
         />
-        <BasicButton className="bg-black text-white" onClick={() => console.log('create party')}>
-          한 판 벌여보세
-        </BasicButton>
+        <BasicButton onClick={() => console.log('create party')}>한 판 벌여보세</BasicButton>
       </form>
     </>
-  );
-};
-
-type PInputWithLabel = {
-  labelText: string;
-  input: JSX.Element;
-  required?: boolean;
-  className?: string;
-};
-
-const InputWithLabel = (props: PInputWithLabel) => {
-  const { labelText, input, required, className } = props;
-  return (
-    <div className={`flex flex-col w-full ${className}`}>
-      <label className="mb-1.5">
-        {labelText}
-        {required && <span className="text-togetus-emoji text-sm"> *</span>}
-      </label>
-      {input}
-    </div>
   );
 };
 
