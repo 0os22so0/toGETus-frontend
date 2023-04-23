@@ -85,18 +85,22 @@ type PPartyList = {
 const PartyList = (props: PPartyList) => {
   const { data } = props;
   const navigate = useNavigate();
+
   return (
-    <div className="w-full flex flex-wrap justify-between">
+    <div className="w-full flex flex-wrap gap-6">
       {data.map((party, index) => (
         <div
           key={`party list ${index}th`}
-          className="bg-red-200 w-[10rem] min-h-[8rem] p-5 rounded-md flex flex-col justify-between items-center cursor-pointer"
+          // className="bg-red-200 w-[8rem] h-[8rem] p-5 rounded-md flex flex-col justify-between items-center cursor-pointer"
+          className="bg-red-200 w-[100px] h-[100px] cursor-pointer"
+          onClick={() => navigate('/party/party-name')}
         >
-          <a onClick={() => navigate('/party/party-name')}>
+          {party.name}
+          {/*     <a onClick={() => navigate('/party/party-name')}>
             <span className="leading-4">{party.name}</span>
             <div className="flex items-center">
-              {/* // TODO :: 쫌쫌따리 작아지는 이미지 */}
-              {/* {party.member.slice(0, 3).map((m, index) => (
+              {/* // TODO :: 쫌쫌따리 작아지는 이미지
+              {party.member.slice(0, 3).map((m, index) => (
                 <div key={index}>
                   <img
                     className={`rounded-full w-[${2 - 0.5 * index}em] h-[${2 - 0.5 * index}em]`}
@@ -106,10 +110,10 @@ const PartyList = (props: PPartyList) => {
                   />
                   <span>{2 - 0.5 * index}</span>
                 </div>
-              ))} */}
+              ))}
               {party.member.length > 3 && <span className="text-sm">+ {party.member.length - 3}</span>}
             </div>
-          </a>
+          </a> */}
         </div>
       ))}
     </div>
