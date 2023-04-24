@@ -26,9 +26,9 @@ const App = () => {
     <RecoilRoot>
       <div className="bg-black !box-border">
         <BrowserRouter basename={process.env.PUBLIC_URL}>
-          <main className="container flex flex-row justify-center sm:flex-col h-[100vh] bg-gradient-to-tl from-[#E9DEFA] to-[#FBFCDB] overflow-scroll">
+          <main className="container flex flex-row justify-center sm:flex-col h-[100vh] bg-gradient-to-tl from-[#E9DEFA] to-[#FBFCDB]">
             <NaviBar />
-            <div className="min-w-[375px] flex-grow p-[4vw]">
+            <div className="min-w-[375px] flex-grow p-[4vw] overflow-auto scrollbar-hide">
               {/* <div className="bg-orange-300 md:h-[calc(100vh-102px)] lg:[100vh]"> */}
               <Routes>
                 {/* Members */}

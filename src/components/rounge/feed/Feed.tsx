@@ -5,9 +5,9 @@ const Feed = () => {
     // TODO :: scroll.......
     <section className="flex flex-col w-full gap-6">
       <Post />
-      {/* <Post />
       <Post />
-      <Post /> */}
+      <Post />
+      <Post />
     </section>
   );
 };
