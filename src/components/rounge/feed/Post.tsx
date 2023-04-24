@@ -1,7 +1,10 @@
 const Post = () => {
   return (
-    <div style={{ width: '100%', backgroundColor: 'tomato', margin: '5px' }}>
-      <h3>Post</h3>
+    <div className="w-full">
+      <p className="text-sm mb-2">오늘</p>
+      <div className="bg-white p-3">
+        <img src="https://picsum.photos/400/400" />
+      </div>
     </div>
   );
 };

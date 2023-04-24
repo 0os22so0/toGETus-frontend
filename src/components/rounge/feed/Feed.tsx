@@ -2,13 +2,13 @@ import Post from './Post';
 
 const Feed = () => {
   return (
-    <>
-      <h2>Feed</h2>
+    // TODO :: scroll.......
+    <section className="flex flex-col w-full gap-6">
       <Post />
+      {/* <Post />
       <Post />
-      <Post />
-      <Post />
-    </>
+      <Post /> */}
+    </section>
   );
 };
 
