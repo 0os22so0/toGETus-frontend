@@ -40,7 +40,7 @@ const PartyRounge = () => {
     </form>
   ) : (
     <main className="w-full">
-      <div className={clsx('w-full mb-6', 'h-[300px] bg-slate-200 text-center')}>TODO :: 달력</div>
+      <div className={clsx('w-full mb-6 rounded-md', 'h-[300px] bg-slate-200 text-center')}>TODO :: 달력</div>
       <Feed />
     </main>
   );
