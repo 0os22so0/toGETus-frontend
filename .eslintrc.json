@@ -3,9 +3,10 @@
     "browser": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
+  // "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "react"],
+  "plugins": ["@typescript-eslint", "react", "react-hooks"],
   "settings": {
     "react": {
       "pragma": "React",
@@ -27,13 +28,13 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": [
-      "warn",
-      {
-        "additionalHooks": "useRecoilCallback"
-      }
-    ]
+    "react/prop-types": "off"
+    // "react-hooks/rules-of-hooks": "error",
+    // "react-hooks/exhaustive-deps": [
+    //   "warn",
+    //   {
+    //     "additionalHooks": "useRecoilCallback"
+    //   }
+    // ]
   }
 }

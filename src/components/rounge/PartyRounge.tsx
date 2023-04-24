@@ -34,7 +34,9 @@ const PartyRounge = () => {
           input={<BasicTextInput placeholder="파티 챌린지 목표" type="text" />}
         />
       </div>
-      <BasicButton onClick={() => setIsFirstVisit(false)}>들어갈게요!</BasicButton>
+      <BasicButton onClick={() => setIsFirstVisit(false)} className="m-auto">
+        들어갈게요!
+      </BasicButton>
     </form>
   ) : (
     <main className="w-full">
