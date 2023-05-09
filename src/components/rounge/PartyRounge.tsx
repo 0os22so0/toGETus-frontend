@@ -7,6 +7,7 @@ import Feed from 'components/rounge/feed/Feed';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
+import PartyCalendar from './PartyCalendar';
 
 const PartyRounge = () => {
   const { name: userName } = useRecoilValue(userProfileState);
@@ -40,7 +41,7 @@ const PartyRounge = () => {
     </form>
   ) : (
     <main className="w-full">
-      <div className={clsx('w-full mb-6 rounded-md', 'h-[300px] bg-slate-200 text-center')}>TODO :: 달력</div>
+      <PartyCalendar />
       <Feed />
     </main>
   );

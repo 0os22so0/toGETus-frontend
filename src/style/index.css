@@ -4,6 +4,10 @@
 
 @import url('./nanumSquareNeo.css');
 
+/* ===================================
+  html element CSS custom
+====================================== */
+
 html,
 body {
   font-family: 'Neo Regular' !important;
@@ -29,3 +33,7 @@ h4 {
   font-size: 1.25rem;
   font-family: 'Neo Bold' !important;
 }
+
+/* ===================================
+  react-calendar CSS custom
+====================================== */
